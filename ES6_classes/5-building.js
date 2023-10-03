@@ -1,20 +1,20 @@
 class Building {
-    constructor(sqft) {
-      if (
-        this.constructor !== Building
+  constructor(sqft) {
+    if (
+      this.constructor !== Building
         && typeof this.evacuationWarningMessage !== 'function'
-      ) {
-        throw Error(
-          'Class extending Building must override evacuationWarningMessage',
-        );
-      }
-  
-      this._sqft = sqft;
+    ) {
+      throw Error(
+        'Class extending Building must override evacuationWarningMessage',
+      );
     }
-  
-    get sqft() {
-      return this._sqft;
-    }
+
+    this._sqft = sqft;
   }
-  
-  export default Building;
+
+  get sqft() {
+    return this._sqft;
+  }
+}
+
+export default Building;
